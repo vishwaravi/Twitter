@@ -136,6 +136,7 @@ public class TweetService{
         for (CommentEntity i : comments){
             String userId = i.getUserId();
             String profilePath = userRepo.getProfileImgByUserId(userId);
+            if (profilePath == null) continue;
             Path path = Paths.get(profilePath);
             if(Files.exists(path)){
                 String profileImgBase64 = "data:image/jpg;base64," + Base64.getEncoder().encodeToString(Files.readAllBytes(path));

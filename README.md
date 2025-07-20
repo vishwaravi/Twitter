@@ -1,9 +1,8 @@
 # Twitter backend
 This project is a Twitter-like backend application built using Spring Boot and Maven. It provides RESTful APIs to perform various Twitter-like functionalities such as posting tweets, following/unfollowing users, and fetching timelines.
 
-#### This project has Two Branches :
-* the main branch uses local db and stores images in project folder
-* the another branch built used cloud db to store images and data 
+> **Frontend Repository**: This Backend works with the [Twitter React Frontend](https://github.com/vishwaravi/twitter-react) - make sure to set up and run the Frontend App.
+
 
 ## Technologies Used
 ### Backend :

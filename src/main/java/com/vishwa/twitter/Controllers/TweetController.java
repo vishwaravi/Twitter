@@ -80,8 +80,8 @@ public class TweetController {
         }
     }
     
-    @PutMapping("/{tweetId}/comment")
-    ResponseEntity<?> postComment(@ModelAttribute CommentEntity comment,@PathVariable long tweetId){
+    @PostMapping("/{tweetId}/comment")
+    ResponseEntity<?> postComment(@RequestBody CommentEntity comment,@PathVariable long tweetId){
         if(tweetService.postComment(comment,tweetId)!=null)
         return new ResponseEntity<>(tweetService.postComment(comment,tweetId),HttpStatus.OK);
         else{
